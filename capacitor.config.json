@@ -1,0 +1,6 @@
+{
+  "appId": "br.horta.inteligente",
+  "appName": "Horta Inteligente",
+  "webDir": "www",
+  "server": {"androidScheme": "https"}
+}

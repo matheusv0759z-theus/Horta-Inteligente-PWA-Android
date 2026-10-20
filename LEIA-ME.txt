@@ -1,0 +1,30 @@
+HORTA INTELIGENTE - PWA EMPACOTADO EM APK
+
+Conteudo:
+- www/: arquivos originais do PWA (interface, MQTT, icones)
+- package.json e capacitor.config.json: configuracao Capacitor
+- .github/workflows/gerar-apk.yml: compilacao automatica no GitHub
+
+PASSOS:
+1. Crie um NOVO repositorio publico ou privado no GitHub, por exemplo Horta-Inteligente-PWA-Android.
+2. Extraia este ZIP e envie para a RAIZ do novo repositorio: pasta www, pasta .github, package.json e capacitor.config.json.
+   IMPORTANTE: o GitHub precisa receber .github/workflows/gerar-apk.yml com este caminho exato.
+3. Abra Actions > Gerar APK Horta Inteligente > Run workflow (ou aguarde a execucao ao enviar para main).
+4. Ao terminar, abra a execucao e baixe o artifact Horta-Inteligente-PWA-APK.
+5. Extraia o artifact e instale app-debug.apk no Android.
+6. No app, abra a tela de conexao e configure o broker MQTT.
+
+Dados conhecidos (NAO incluir senha no repositorio):
+Servidor: ja371000.ala.eu-central-1.emqxsl.com
+Porta: 8084
+Usuario: painel-web
+Prefixo: irrig
+Device ID: estufa01
+Senha: solicite ao colega por canal privado.
+
+AVISOS:
+- Interface embutida no APK: Netlify nao e necessario.
+- MQTT usa broker na nuvem e requer internet.
+- Nao testado em celular nem compilado nesta sessao; podem ser necessarios ajustes.
+- O PWA original guarda credenciais no armazenamento local do app; em aparelho compartilhado, isso merece cuidado.
+- Nao misture este workflow com o projeto Kivy anterior: use repositorio separado.
